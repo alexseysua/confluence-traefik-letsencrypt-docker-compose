@@ -84,10 +84,9 @@ services:
       # Use the 'Confluence Synchrony' (custom) entry point
       - "traefik.tcp.routers.confluence-synchrony.entrypoints=confluence-synchrony"
       # Define the internal container port for routing to the Confluence Synchrony service
-      - "traefik.tcp.services.confluence-synchrony.loadbalancer.server.port=11434"
+      - "traefik.tcp.services.confluence-synchrony.loadbalancer.server.port=8091"
       # Specify which Docker network Traefik should use for routing
       - "traefik.docker.network=traefik-network"
-
     restart: unless-stopped
     depends_on:
       postgres:
