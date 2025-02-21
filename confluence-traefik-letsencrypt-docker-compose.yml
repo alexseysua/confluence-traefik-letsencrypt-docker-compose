@@ -111,7 +111,7 @@ services:
       # Define the secure (HTTPS) entry point on port 443
       - "--entrypoints.websecure.address=:443"
       # Define the Synchrony entry point on port 8091
-      - "--entryPoints.synchrony.address=:8091"
+      - "--entryPoints.confluence-synchrony.address=:8091"
       # Enable the Docker provider to detect containers and their labels
       - "--providers.docker=true"
       # Point Traefik to the Docker socket
